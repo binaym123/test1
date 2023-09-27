@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 3rem;
+  background-color: #ffffff;
+}
+
+h1, h2 {
+  color: #333333;
+}
+
+:root{
+  --color-text-input: #828282;
+}
+.form__address,
+.form__name,
+.form__mail,
+.form__number,
+.form__container h2{
+  padding: 0 40px;
+}
+.form__input_wrapper{
+  padding-bottom: 30px;
+  border-bottom: 2px solid #cfcfcf;
+}
+.flex{
+  display: flex;
+}
+.form{
+  max-width: 100%;
+}
+.form__container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.form__name{
+  display: flex;
+  gap: 30px;
+}
+.form__name input{
+  width: 48%;
+}
+.form__name_wrap{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form__name_wrap input{
+  width: 100%;
+}
+.form__container form{
+  margin-top: 30px;
+}
+.form__container input{
+  height: 50px;
+  border: 1.5px solid #cfcfcf;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--color-text-input);
+}
+.form__container label{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-input);
+  margin-top: 10px;
+}
+.form__container h2{
+  margin-top: 40px !important;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  color: #323232;
+  margin: 0;
+  margin-bottom: 3px;
+}
+.sure::after{
+  display: flex;
+  content: '*';
+  color: red;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+
+
+/* Address */
+.mt-30{
+  margin-top: 30px;
+}
+.form__address{
+
+}
+.form__address_row{
+  gap: 30px;
+}
+.form__address_wrap {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Number */
+.w-50{
+  max-width: 48%;
+}
+.form__number {
+
+}
+
+/* Button */
+
+.form button{
+  margin: 0 40px;
+  display: block;
+  margin-top: 40px;
+  background: #00000000;
+  color: var(--color-text-input);
+  padding: 20px 90px;
+  font-size: 20px;
+  border: 2px solid rgb(0, 217, 0);
+  border-radius: 5px;
+}
+
+@media (max-width: 700px){
+  .form__address, .form__name, .form__mail, .form__number, .form__container h2{
+    padding: 0;
+  }
+}
+@media (max-width: 510px){
+  .form__name{
+    flex-direction: column;
+  }
+  .form__address_row{
+    display: flex;
+    flex-direction: column;
+  }
+  .w-50{
+    max-width: 100%;
+  }
+  .form button{
+    width: 100%;
+    margin: 40px auto;
+  }
+}
