@@ -32,6 +32,15 @@ h1, h2 {
 .form{
   max-width: 100%;
 }
+.form__logo{
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+.error-text{
+  color: red;
+  font-style: oblique;
+}
 .form__container{
   max-width: 800px;
   margin: 0 auto;
@@ -115,6 +124,7 @@ h1, h2 {
 /* Button */
 
 .form button{
+  cursor: pointer;
   margin: 0 40px;
   display: block;
   margin-top: 40px;
@@ -124,6 +134,13 @@ h1, h2 {
   font-size: 20px;
   border: 2px solid rgb(0, 217, 0);
   border-radius: 5px;
+}
+
+.form button:hover{
+  color: #fff;
+  transition: all 0.3s ease 0s;
+  border: 2px solid rgb(0, 144, 0);
+  background-color: rgb(88, 255, 88);
 }
 
 @media (max-width: 700px){
