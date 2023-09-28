@@ -163,36 +163,47 @@ function FormHook() {
             <div>
               <h2 className='sure'>Phone Number</h2>
             </div>
-            <div className='form__number '>
-              <div className="form__address_wrap w-50">
-                <input type="tel" id="phoneNumber" name="phoneNumber" 
-                 placeholder='(000) 000-0000'
-                 maxLength={10}
-                 minLength={10}
-                 {...register('phoneNumber', {
+            <div className="form__number ">
+            <div className="form__address_wrap w-50">
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="(000) 000-0000"
+                {...register('phoneNumber', {
                   required: 'Поле не заполнено',
                   pattern: {
                     value: /^[0-9]+$/,
                     message: 'Номер телефона может содержать только цифры',
                   },
                 })}
-                 />
-                 {errors.phoneNumber && 
-                  <span className="error-text">{errors.phoneNumber.message}
-                </span>}
-              </div>
+              />
+              {errors.phoneNumber && (
+                <span className="error-text">{errors.phoneNumber.message}</span>
+              )}
+            </div>
             </div>
             <div>
               <h2>E-mail</h2>
             </div>
-            <div className='form__mail'>
+            <div className="form__mail">
               <div className="form__address_wrap w-50">
-                <input type="email" id="email" name="email" placeholder='ex: email@yahoo.com' 
-                {...register('email', {
-                  // required: 'Поле не заполнено',
-                })}
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ex: email@yahoo.com"
+                  {...register('email', {
+                    // required: 'Поле не заполнено',
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: 'Введите корректный адрес электронной почты',
+                    },
+                  })}
                 />
-                <label htmlFor="email">example@example.com</label>
+                {errors.email && (
+                  <span className="error-text">{errors.email.message}</span>
+                )}
               </div>
             </div>
           </div>
