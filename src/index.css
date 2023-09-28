@@ -3,9 +3,9 @@
 }
 
 body {
-  font-family: sans-serif;
-  margin: 3rem;
   background-color: #ffffff;
+  font-family: sans-serif;
+  margin: 20px;
 }
 
 h1, h2 {
@@ -29,13 +29,22 @@ h1, h2 {
 .flex{
   display: flex;
 }
+
 .form{
   max-width: 100%;
 }
 .form__logo{
+  width: 200px;
+  height: 200px;
+  margin: auto;
   display: flex;
   justify-content: center;
   user-select: none;
+  border-radius: 50%;
+  outline: 2px solid #323232;
+}
+.form__logo img{
+  padding: 10px;
 }
 .error-text{
   color: red;
@@ -60,9 +69,7 @@ h1, h2 {
 .form__name_wrap input{
   width: 100%;
 }
-.form__container form{
-  margin-top: 30px;
-}
+
 .form__container input{
   height: 50px;
   border: 1.5px solid #cfcfcf;
@@ -78,6 +85,7 @@ h1, h2 {
   margin-top: 10px;
 }
 .form__container h2{
+  height: 34.5px;
   margin-top: 40px !important;
   display: flex;
   font-size: 20px;
@@ -146,6 +154,10 @@ h1, h2 {
 @media (max-width: 700px){
   .form__address, .form__name, .form__mail, .form__number, .form__container h2{
     padding: 0;
+  }
+  .form button{
+    margin: auto;
+    margin-top: 40px;
   }
 }
 @media (max-width: 510px){

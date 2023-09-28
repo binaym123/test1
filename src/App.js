@@ -1,11 +1,9 @@
-import { Route, Routes } from 'react-router-dom';
-
-import Form from './layout/Form.js';
+import FormHook from './layout/FormHook.js';
 
 function App() {
   return (
     <div>
-      <Form />
+      <FormHook />
     </div>
   );
 }
